@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js"></script>
+</head>
+<body>
+    <div id="container">
+        <nav id="navigation">
+            <div id="navigation-text">
+                <p id="lecture-name">Objects, JSON and DOM Events</p>
+                <p id="problem-name">05. Buttons</p>
+            </div>
+        </nav>
+        <main>
+            <div id="exercise">
+                <form>
+                    <label>Key</label>
+                    <input type="text" id="key">
+                    <label>Value</label>
+                    <input type="text" id="value">
+                    <div class="center">
+                        <input type="submit" class="button" onclick="addProperty()" value="Add">  
+                        <input type="submit" class="button" onclick="getProperty()" value="Get Value">
+                        <input type="submit" class="button" onclick="getObject()" value="Get Whole Object">
+                    </div>
+                </form>
+                <label>Console</label>
+               <textarea readonly rows="10" cols="50" id="result"></textarea>
+            </div>
+        </main>
+    </div>
+    <script>
+        document.querySelectorAll(".button").forEach(element => {
+        element.addEventListener("click", function(event){
+        event.preventDefault();
+      });
+    });
+    </script>
+</body>
+</html>
